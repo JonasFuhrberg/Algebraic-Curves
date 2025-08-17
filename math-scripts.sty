@@ -1,0 +1,43 @@
+% ===============================
+%  mymathnotes.sty
+%  A custom package for math notes
+% ===============================
+
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{mymathnotes}[2025/08/17 v1.0 Math notes style]
+
+% === Fonts and Encoding ===
+\RequirePackage[utf8]{inputenc}
+\RequirePackage[T1]{fontenc}
+\RequirePackage{lmodern}
+
+% === Math Packages ===
+\RequirePackage{amsmath, amssymb, amsthm, mathtools}
+\RequirePackage{physics} % derivatives, bras/kets, vectors
+\RequirePackage{siunitx} % numbers and units
+\RequirePackage{bm}      % bold math
+
+% === Colors and Boxes ===
+\RequirePackage{xcolor}
+\RequirePackage[most]{tcolorbox}
+
+% Default tcolorbox settings
+\tcbset{colback=white, colframe=black, fonttitle=\bfseries}
+
+% === Custom Theorem-like Boxes ===
+\newtcolorbox{definitionBox}[1][]{colback=green!5!white, colframe=green!75!black,
+  title=Definition, #1}
+
+\newtcolorbox{theoremBox}[1][]{colback=blue!5!white, colframe=blue!75!black,
+  title=Theorem, #1}
+
+\newtcolorbox{exampleBox}[1][]{colback=yellow!10!white, colframe=yellow!50!black,
+  title=Example, #1}
+
+\newtcolorbox{proofBox}[1][]{colback=gray!5!white, colframe=gray!75!black,
+  title=Proof, #1}
+
+\newtcolorbox{noteBox}[1][]{colback=red!5!white, colframe=red!75!black,
+  title=Note, #1}
+
+% === End of Package ===
