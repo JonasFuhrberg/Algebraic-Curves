@@ -4,7 +4,7 @@
 % ===============================
 
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesPackage{mymathnotes}[2025/08/17 v1.0 Math notes style]
+\ProvidesPackage{math-scripts}[2025/08/17 v1.0 Math notes style]
 
 % === Fonts and Encoding ===
 \RequirePackage[utf8]{inputenc}
@@ -25,8 +25,8 @@
 \tcbset{colback=white, colframe=black, fonttitle=\bfseries}
 
 % === Custom Theorem-like Boxes ===
-\newtcolorbox{definitionBox}[1][]{colback=green!5!white, colframe=green!75!black,
-  title=Definition, #1}
+\newtcolorbox{definitionBox}[2][]{colback=green!5!white, colframe=green!75!black,
+  title={#2}, #1}
 
 \newtcolorbox{theoremBox}[1][]{colback=blue!5!white, colframe=blue!75!black,
   title=Theorem, #1}
