@@ -1,6 +1,27 @@
 \subsection{Introduction to Projective Geometry}
 
-\begin{definitionBox}{Projective Spaces}
 Projective spaces are a generalisation of spaces such as $\mathbb{R}^n$ using linear algebra. \\
-Let $\F$ be a field (usually, these fields are $\R$ or $\C$ but they can by also be any arbitrary field $\F_p$).
+
+\begin{definitionBox}{Projective Space}
+    
+    %requirements
+    \begin{enumerate}
+        \item Let $\F$ be a field (usually, these fields are $\R$ or $\C$ but they can by also be any arbitrary field $\F_p$).
+        \item Let $V$ be a finite-dimensional vector space over the given field $\F$. We usually assume that $V$ has $\mathrm{dim}(V) = n +1$ with $n \in \N$.
+    \end{enumerate}  
+
+    %definition
+    We define the projective space $\PS(V)$ associated to $V$ to be the \textbf{set of 1-dimensional vector subspaces} $U_i$, $i \in \N$ with $U \leq V$.
 \end{definitionBox}
+
+\vspace{0.5cm}
+
+The introduction of a projection space $\PS(V)$ based on a given vector space $V$ leads to the reduction of a dimension because vectors of the given vector space $V$ that go into the same direction as are grouped together. The are considered to be identical except for the scaling factor. This scaling factor is thrown out. This leads to the reduction in dimension. This is particularly illustrative if you consider an $n$ dimensional vector space $V_p$ over an arbitrary field $\F$ with vectors $v\in V$ with $v_i \in \F$ expressed using generalised, $n$-dimensional polar coordinates. Thus, $v$ is expressed via $v_1$ giving the length of the vector and $v_i, i \in [2,n]$ specifying the angle. If you then consider vectors of the same angle following the same direction towards a point in infinity and you are only concerned with retaining the direction and do not need the scaling factor you can omit $v_1$, thus reducing the dimension and gaining $\mathrm{dim}(\PS(V)) = \mathrm{dim}(V) - 1$. 
+
+%example in in 3 dimensional polar coordinates
+\begin{exampleBox}
+    \begin{enumerate}
+        \item Let us assume or field $\F$ is $\C^3$
+        \item Let $V$ be a finite-dimensional vector space over the given field $\F$. We usually assume that $V$ has $\mathrm{dim}(V) = n +1$ with $n \in \N$.
+    \end{enumerate}  
+\end{exampleBox}
