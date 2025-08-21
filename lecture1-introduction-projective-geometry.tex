@@ -2,8 +2,10 @@
 
 Projective spaces are a generalisation of spaces such as $\mathbb{R}^n$ using linear algebra. \\
 
-\begin{definitionBox}{Projective Space}
-    
+
+
+
+\begin{definitionBox}{Projective Space}    
     %requirements
     \begin{itemize}
         \item Let $\F$ be a field (usually, these fields are $\R$ or $\C$ but they can by also be any arbitrary field $\F_p$).
@@ -13,8 +15,30 @@ Projective spaces are a generalisation of spaces such as $\mathbb{R}^n$ using li
     %definition
     We define the projective space $\PS(V)$ associated to $V$ to be the \textbf{set of 1-dimensional vector subspaces} $U_i$, $i \in \N$ with $U \leq V$.
 \end{definitionBox}
-
 \vspace{0.5cm}
+
+
+
+%further notation for vector scaling
+We now introduce further notation for simplified notation of scaling vectors.
+
+\begin{definitionBox}{Set of Scaled Vectors}
+    For each $0 \neq v \in V$ we write $[v] = \{\lambda v: \lambda \in \F\}$.
+    $[v]$ thus becomes a direction and a base vector in this 1-dimensional vector subspace.
+\end{definitionBox}
+\vspace{0.5cm}
+
+
+
+%defining P(V) with regards to [v]
+Now, using this new found notation we can actually mathematically describe our set of 1-dimensional vector subspaces which in turn all consist of $[v]$ over our given vector space $V$.
+
+\begin{definitionBox}{$\PS(V)$ with regards to $[v]$}
+    We can define $\PS(V)$ with regards to every non-zero $v \in V$
+    \begin{gather*}
+        \PSV = \{[v]: 0 \neq v \in V\}
+    \end{gather*}
+\end{definitionBox}
 
 The introduction of a projection space $\PS(V)$ based on a given vector space $V$ leads to the reduction of a dimension because vectors of the given vector space $V$ that go into the same direction as are grouped together. The are considered to be identical except for the scaling factor. This scaling factor is thrown out. This leads to the reduction in dimension. This is particularly illustrative if you consider an $n$ dimensional vector space $V_p$ over an arbitrary field $\F$ with vectors $v\in V$ with $v_i \in \F$ expressed using generalised, $n$-dimensional polar coordinates. Thus, $v$ is expressed via $v_1$ giving the length of the vector and $v_i, i \in [2,n]$ specifying the angle. If you then consider vectors of the same angle following the same direction towards a point in infinity and you are only concerned with retaining the direction and do not need the scaling factor you can omit $v_1$, thus reducing the dimension and gaining $\mathrm{dim}(\PS(V)) = \mathrm{dim}(V) - 1$. 
 
@@ -25,7 +49,7 @@ The introduction of a projection space $\PS(V)$ based on a given vector space $V
     %giving the requirements
     \begin{itemize}
         \item Let $V = \R^3$ (thus, $\F = \R$) and assume each $v \in V$ is represented using a transformation from Cartesian coordinates to angles and a radius.
-        \item every $v \in V$ can be expressed as and then transformed to a vector $v' \in V$ with a spherical basis: 
+        \item Every $v \in V$ can be expressed as and then transformed to a vector $v' \in V$ with a spherical basis: 
             \begin{gather*}
                 v = (x,y,z) \Rightarrow v' =  (r, \vartheta,\varphi)  \\
                 r = \sqrt{x^2+y^2+z^2} \\
@@ -41,6 +65,10 @@ The introduction of a projection space $\PS(V)$ based on a given vector space $V
         \item We realise that if we omit the length of each vector expressed in $v_i^1, i \in [1,2]$, both point into the same direction towards a point in infinity.
         \item If we know want to express location of the point (the direction) we only require the two angles. We have thus reduced the dimension by one.
     \end{enumerate}
+    If we now want to generalise these findings we can observe that both $v_1 \in [v]$ and $v_2 \in [v]$ because
+    \begin{gather*}
+        \PS(V) = \{ \lambda v :  0 \neq v\in V, \F \} = \{ v_1, ...\} 
+    \end{gather*}
     
     %examplary vectors set into the 1 dimensional set
 \end{exampleBox}
