@@ -34,13 +34,46 @@ We now introduce further notation for simplified notation of scaling vectors.
 Now, using this new found notation we can actually mathematically describe our set of 1-dimensional vector subspaces which in turn all consist of $[v]$ over our given vector space $V$.
 
 \begin{definitionBox}{$\PS(V)$ with regards to $[v]$}
-    We can define $\PS(V)$ with regards to every non-zero $v \in V$
+    We can define $\PS(V)$ with regards to every non-zero $v \in V$ over a given field $\F$
     \begin{gather*}
         \PSV = \{[v]: 0 \neq v \in V\}
     \end{gather*}
+    We can now further deduce from $[v]$ that it cannot be unique so that it holds $[v] = [w]$ iff $v = \lambda w, \: \lambda \in \F \backslash \{0\}$
 \end{definitionBox}
 
-The introduction of a projection space $\PS(V)$ based on a given vector space $V$ leads to the reduction of a dimension because vectors of the given vector space $V$ that go into the same direction as are grouped together. The are considered to be identical except for the scaling factor. This scaling factor is thrown out. This leads to the reduction in dimension. This is particularly illustrative if you consider an $n$ dimensional vector space $V_p$ over an arbitrary field $\F$ with vectors $v\in V$ with $v_i \in \F$ expressed using generalised, $n$-dimensional polar coordinates. Thus, $v$ is expressed via $v_1$ giving the length of the vector and $v_i, i \in [2,n]$ specifying the angle. If you then consider vectors of the same angle following the same direction towards a point in infinity and you are only concerned with retaining the direction and do not need the scaling factor you can omit $v_1$, thus reducing the dimension and gaining $\mathrm{dim}(\PS(V)) = \mathrm{dim}(V) - 1$. 
+%understanding the dimension and creating intuition
+This set of vectors $[v]$ now allows to understand the projective space of given vector space $V$ as a set of 1-dimensional directions which are unique except for their scaling. \\
+The introduction of a projection space $\PS(V)$ based on a given vector space $V$ leads to the reduction of a dimension because vectors of the given vector space $V$ that go into the same direction as are grouped together. The are considered to be identical except for the scaling factor. This scaling factor is thrown out. This leads to the reduction in dimension. \\
+Thus, we can express via group division which leads to a reduction in its dimension. Here, we turn our field $\F$ into a 1 dimensional group $\F^*$ via the $*$ operator.
+
+\begin{definitionBox}{$\PSV$ via group division}
+    %requirements
+    \begin{itemize}
+        \item Let $F^*$ the 1-dimensional group which means $\PSV$ is both compact and a Hausdorff space (e.g. two distinct points can be "housed off" via disjointed open sets).
+    \end{itemize}
+    \begin{gather*}
+        \PSV = (V \backslash \{ 0 \}) /\F^*
+    \end{gather*}
+\end{definitionBox}
+
+%on mapping it to other topological spaces
+This means $\PSV$ is a topological manifold, i.e. it behaves locally like a Euclidean space. Thus, for every point $v \in \PSV$ a small neighbourhood of points can be mapped to the the corresponding vector space $V$ over $\F$. \\
+
+%dimensions of P(V) and V
+We can thus observe the correspondence of dimensions between $V$ and $\PSV$
+\begin{definitionBox}{Dimension of $\PSV$}
+    \begin{itemize}
+        \item Let $\F^*$ be the group over the field $\F$ with $\mathrm{dim}\;\F = 1$
+    \end{itemize}
+    \begin{gather*}
+        \mathrm{dim}\; \PSV = \mathrm{dim}\; V -1
+    \end{gather*}
+\end{definitionBox}
+
+
+
+
+This is particularly illustrative if you consider an $n$ dimensional vector space $V_p$ over an arbitrary field $\F$ with vectors $v\in V$ with $v_i \in \F$ expressed using generalised, $n$-dimensional polar coordinates. Thus, $v$ is expressed via $v_1$ giving the length of the vector and $v_i, i \in [2,n]$ specifying the angle. If you then consider vectors of the same angle following the same direction towards a point in infinity and you are only concerned with retaining the direction and do not need the scaling factor you can omit $v_1$, thus reducing the dimension and gaining $\mathrm{dim}(\PS(V)) = \mathrm{dim}(V) - 1$. 
 
 
 %example in in 3 dimensional polar coordinates
@@ -67,7 +100,7 @@ The introduction of a projection space $\PS(V)$ based on a given vector space $V
     \end{enumerate}
     If we now want to generalise these findings we can observe that both $v_1 \in [v]$ and $v_2 \in [v]$ because
     \begin{gather*}
-        \PS(V) = \{ \lambda v :  0 \neq v\in V, \F \} = \{ v_1, ...\} 
+        \PS(V) = \{ [v] :  0 \neq v\in V\} = \{ \{v_1, v_2, ...\}\} 
     \end{gather*}
     
     %examplary vectors set into the 1 dimensional set
