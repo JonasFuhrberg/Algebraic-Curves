@@ -1,10 +1,8 @@
 \subsection{Introduction to Projective Geometry}
 
-Projective spaces are a generalisation of spaces such as $\mathbb{R}^n$ using linear algebra. \\
+Projective spaces are a generalisation of spaces such as $\mathbb{R}^n$ using linear algebra. 
 
-
-
-
+% first definitino of Algebraic curves
 \begin{definitionBox}{Projective Space}    
     %requirements
     \begin{itemize}
@@ -15,7 +13,6 @@ Projective spaces are a generalisation of spaces such as $\mathbb{R}^n$ using li
     %definition
     We define the projective space $\PS(V)$ associated to $V$ to be the \textbf{set of 1-dimensional vector subspaces} $U_i$, $i \in \N$ with $U \leq V$.
 \end{definitionBox}
-\vspace{0.5cm}
 
 
 
@@ -26,7 +23,6 @@ We now introduce further notation for simplified notation of scaling vectors.
     For each $0 \neq v \in V$ we write $[v] = \{\lambda v: \lambda \in \F\}$.
     $[v]$ thus becomes a direction and a base vector in this 1-dimensional vector subspace.
 \end{definitionBox}
-\vspace{0.5cm}
 
 
 
@@ -70,19 +66,17 @@ We can thus observe the correspondence of dimensions between $V$ and $\PSV$
     \end{gather*}
 \end{definitionBox}
 
-
-
-
+%Example of the Reduction of Dimension
+Thus, we can see that the projective plane $\PSV$ of a given vector field $V$ has one dimension or one degree of freedom less than $V$. \\
 This is particularly illustrative if you consider an $n$ dimensional vector space $V_p$ over an arbitrary field $\F$ with vectors $v\in V$ with $v_i \in \F$ expressed using generalised, $n$-dimensional polar coordinates. Thus, $v$ is expressed via $v_1$ giving the length of the vector and $v_i, i \in [2,n]$ specifying the angle. If you then consider vectors of the same angle following the same direction towards a point in infinity and you are only concerned with retaining the direction and do not need the scaling factor you can omit $v_1$, thus reducing the dimension and gaining $\mathrm{dim}(\PS(V)) = \mathrm{dim}(V) - 1$. 
 
 
 %example in in 3 dimensional polar coordinates
 \begin{exampleBox}{Projective Space in $\R^3$}
-    This example illustrates how the projective space of $V = \R^3$ $\PS(V) = \PS(\R^3)$ reduces its dimension due to the omission of scaling.
     %giving the requirements
     \begin{itemize}
-        \item Let $V = \R^3$ (thus, $\F = \R$) and assume each $v \in V$ is represented using a transformation from Cartesian coordinates to angles and a radius.
-        \item Every $v \in V$ can be expressed as and then transformed to a vector $v' \in V$ with a spherical basis: 
+        \item Let $V = \R^3$ (thus, $\F = \R$) and assume each $v \in V$ via Cartesian unit coordinates.
+        \item Every $v \in V$ can be transformed into a vector $v' \in V$ with a spherical basis: 
             \begin{gather*}
                 v = (x,y,z) \Rightarrow v' =  (r, \vartheta,\varphi)  \\
                 r = \sqrt{x^2+y^2+z^2} \\
@@ -96,12 +90,38 @@ This is particularly illustrative if you consider an $n$ dimensional vector spac
     \begin{enumerate}
         \item We can find $\lambda = 2 \in \R$ to express $\lambda v_1 = v_2$. Thus, these vectors are linearly dependent.
         \item We realise that if we omit the length of each vector expressed in $v_i^1, i \in [1,2]$, both point into the same direction towards a point in infinity.
-        \item If we know want to express location of the point (the direction) we only require the two angles. We have thus reduced the dimension by one.
+        \item If we know want to express the location of the point in infinity, i.e. a direction we only require the two angles. We have thus "reduced" the dimension by one by eliminating one degree of freedom.
     \end{enumerate}
-    If we now want to generalise these findings we can observe that both $v_1 \in [v]$ and $v_2 \in [v]$ because
+\end{exampleBox}
+
+If we now want to generalise these findings from the previous example we can observe that both $v_1 \in [v]$ and $v_2 \in [v]$ because
     \begin{gather*}
         \PS(V) = \{ [v] :  0 \neq v\in V\} = \{ \{v_1, v_2, ...\}\} 
     \end{gather*}
-    
-    %examplary vectors set into the 1 dimensional set
+While the vectors in $[v]$ still retain their 3 coordinates they are themselves 2-dimensional objects since they are lines pointing towards a point in infinity.
+
+
+
+
+%examples for names of projective planes
+We can find further examples for the projective plane with sensible names for dimensions we can still imagine.
+\begin{exampleBox}{Naming Projective Planes}
+    For dimensions 0 to 2 of a projective plane we name these analogously to normal vector spaces.
+    \begin{gather*}
+        \mathrm{dim} \; \PSV = 0 \Rightarrow \PSV \mathrm{\;is \;a\; point} \\
+        \mathrm{dim} \; \PSV = 1 \Rightarrow \PSV \mathrm{\;is \;a\; line} \\
+        \mathrm{dim} \; \PSV = 2 \Rightarrow \PSV \mathrm{\;is \;a\; plane} \\
+    \end{gather*}
+    If we want to express the algebraic plane of $\R^3$ using unit vectors we get:
+    \begin{gather*}
+        \PS(\R^3) = S^2/\{\pm 1\}
+    \end{gather*}
 \end{exampleBox}
+
+%explanation on the unit circle
+Here, $\PS(\R^3)$ is clearly a 2-dimensional object. The $S^2$ object denotes the unit 2-sphere in $\R^3$: $S^2 = \{x \in \R^3: ||x||_2 = 1\}$ which contains all vector that go through the origin and thus gives all possible directions in $\R^3$ which makes it a sensible candidate for our definition. The $\{\pm 1\}$ specifies that directions $v$ and $-v$ are treated as the same direction since $-v = -1 \cdot v\in [v]$
+
+
+
+
+
