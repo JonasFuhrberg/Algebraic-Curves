@@ -2,7 +2,7 @@
 
 Projective spaces are a generalisation of spaces such as $\mathbb{R}^n$ using linear algebra. 
 
-% first definitino of Algebraic curves
+% first definition of Algebraic curves
 \begin{definitionBox}{Projective Space}    
     %requirements
     \begin{itemize}
@@ -11,7 +11,15 @@ Projective spaces are a generalisation of spaces such as $\mathbb{R}^n$ using li
     \end{itemize}  
 
     %definition
-    We define the projective space $\PS(V)$ associated to $V$ to be the \textbf{set of 1-dimensional vector subspaces} $U_i$, $i \in \N$ with $U \leq V$.
+    We define the projective space $\PS(V)$ associated to $V$ to be the \textbf{set of 1-dimensional vector subspaces} $U_i$, $i \in \N$ with $U \leq V$. \\
+    %shorthand for R^n and C^n
+    For common Vector spaces such as $\R^n$ and $\C^n$ we can define further shorthand:
+    \begin{gather*}
+        \R\PS^n \coloneq \PS(\R^n) \\
+        \C\PS^n \coloneq \PS(\C^n) \\
+        \PS^n = \PS_n \coloneq \PSV 
+    \end{gather*}
+    Here, $V$ is an $n$-dimensional vector space over any given field $\F$.
 \end{definitionBox}
 
 
@@ -119,7 +127,30 @@ We can find further examples for the projective plane with sensible names for di
 \end{exampleBox}
 
 %explanation on the unit circle
-Here, $\PS(\R^3)$ is clearly a 2-dimensional object. The $S^2$ object denotes the unit 2-sphere in $\R^3$: $S^2 = \{x \in \R^3: ||x||_2 = 1\}$ which contains all vector that go through the origin and thus gives all possible directions in $\R^3$ which makes it a sensible candidate for our definition. The $\{\pm 1\}$ specifies that directions $v$ and $-v$ are treated as the same direction since $-v = -1 \cdot v\in [v]$
+Here, $\PS(\R^3)$ is clearly a 2-dimensional object. The $S^2$ object denotes the unit 2-sphere in $\R^3$: $S^2 = \{x \in \R^3: ||x||_2 = 1\}$ which contains all vector that go through the origin and thus gives all possible directions in $\R^3$ which makes it a sensible candidate for our definition. The $\{\pm 1\}$ specifies that directions $v$ and $-v$ are treated as the same direction since $-v = -1 \cdot v\in [v]$.\\
+
+%Vector subspaces
+Similarly to vector spaces, we can define vector subspaces for an associated projective space.
+\begin{definitionBox}{Projective Linear Subspaces}
+    \begin{itemize}
+        \item Suppose $U$ is a vector subspace of $V$ ($U \leq V$).
+    \end{itemize}
+    Then, $\PS(U) \leq \PSV$ and we call $\PS(U)$ a \textbf{projective linear subspace} of $\PSV$
+\end{definitionBox}
+
+%Naming the vector subspaces
+We can, similarly to previous naming conventions, find sensible names for these subspaces of specific dimension.
+\begin{exampleBox}{Specific Projective Linear Subspaces}
+    \begin{itemize}
+        \item Suppose $U$ is a vector subspace of $V$ ($U \leq V$).
+    \end{itemize}
+    \begin{gather*}
+        \mathrm{dim} \; \PS(U) = 1 \Rightarrow \PS(U) \mathrm{\;is\;a\;projective\;line\;in\;}\PSV \\
+        \mathrm{dim} \; \PS(U) = 2 \Rightarrow \PS(U) \mathrm{\;is\;a\;projective\;plane\;in\;}\PSV \\
+        \mathrm{dim} \; \PS(U) = \mathrm{dim\;} \PSV - 1 \Rightarrow \PS(U) \mathrm{\;is\;a\;hyperplane\;in\;}\PSV \\  
+    \end{gather*}
+\end{exampleBox}
+
 
 
 
